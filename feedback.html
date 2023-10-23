@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <center><title>Feedback Form</title></center>
+    <style>
+        /* Add your custom CSS here */
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            // Validate the form fields here
+            var rating = document.getElementById('rating').value;
+            var comment = document.getElementById('comment').value;
+
+            if (rating < 1 || rating > 5) {
+                alert("Please provide a valid rating (between 1 and 5).");
+                return false;
+            }
+
+            if (comment.trim() === '') {
+                alert("Please provide a comment.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My menu </title>
+<link rel ="stylesheet" type = "text/css" href =ks.css>
+</head>
+<body>
+<h1> My menu </h1>
+<style>
+table,th,td{
+   border:2px solid black;
+}
+</style>
+<table>
+<th>
+<select name="home page" id="home page">
+  <option value="https://www.w3schools.com/html/html_tables.asp">home page</option>
+  <option value="file:///C:/Users/harik/OneDrive/Desktop/trial.html">about us</option>
+  <option value="file:///C:/Users/harik/OneDrive/Desktop/biodata.html">contact</option>
+</select>
+</th>
+
+<th>
+<select name="student name" id="student name">
+  <option value="student name">student name</option>
+  <option value="xx">xx</option>
+  <option value="yy">yy</option>
+  <option value="zz">zz</option>
+</select>
+</th>
+<th>
+<select name="class details" id="class details">
+  <option value="class details">class details</option>
+  <option value="AHS-12A1">AHS-12A1</option>
+  <option value="AHS-12A2">AHS-12A2</option>
+  <option value="AHS-12B1">AHS-12B1</option>
+</select>
+</th>
+</table>
+<script>
+	document.getElementById("home page").addEventListener
+		("change",function()
+			{
+				var x= this.value;
+				if(x)
+				{ window.location.href=x;
+					}	}
+		)
+</script>
